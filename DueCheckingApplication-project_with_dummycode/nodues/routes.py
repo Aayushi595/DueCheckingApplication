@@ -28,9 +28,8 @@ def generate_random_password(length=10):
     return random_password
 
 @app.route("/", methods=['GET','POST'])
-@app.route("/home", methods=['GET','POST'])
-def home():
-    return render_template('home.html')
+    def home():
+        return render_template('home.html')
 
 # Route to handle the search form submission
 @app.route('/search_results', methods=['POST'])
